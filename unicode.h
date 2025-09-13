@@ -12,7 +12,7 @@ extern "C" {
 #define U_EXPORT2
 #include "utf8.h"
 #include "utf16.h"
-#include "portable/endian.h"
+#include "endian.h"
 
 #define U16_NEXT_LE(s, i, length, c) UPRV_BLOCK_MACRO_BEGIN { \
     (c)=le16toh((s)[(i)++]); \

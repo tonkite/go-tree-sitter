@@ -157,6 +157,7 @@ func modifyIncludePaths(path string) error {
 		// Modify the content and write back
 		modifiedContent := strings.ReplaceAll(string(content), `"tree_sitter/`, `"`)
 		modifiedContent = strings.ReplaceAll(modifiedContent, `"unicode/`, `"`)
+		modifiedContent = strings.ReplaceAll(modifiedContent, `"portable/`, `"`)
 		return os.WriteFile(filePath, []byte(modifiedContent), info.Mode())
 	})
 }
