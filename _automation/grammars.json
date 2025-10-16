@@ -260,8 +260,8 @@
       "parser.c",
       "scanner.c"
     ],
-    "reference": "v0.22.5",
-    "revision": "d9017869dda79cefe2dc9d23c6125eda0a2d5d22",
+    "reference": "v0.24.0",
+    "revision": "2d55e74b0485fe05058ffe5e8155506c9710c767",
     "updateBasedOn": "tag"
   },
   {
