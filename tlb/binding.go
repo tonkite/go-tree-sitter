@@ -4,7 +4,7 @@ package tlb
 //TSLanguage *tree_sitter_tlb();
 import "C"
 import (
-	sitter "github.com/smacker/go-tree-sitter"
+	sitter "github.com/tonkite/go-tree-sitter"
 	"unsafe"
 )
 

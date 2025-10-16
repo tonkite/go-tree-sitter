@@ -2,9 +2,9 @@ package tolk_test
 
 import (
 	"context"
-	sitter "github.com/smacker/go-tree-sitter"
-	"github.com/smacker/go-tree-sitter/tolk"
 	"github.com/stretchr/testify/assert"
+	sitter "github.com/tonkite/go-tree-sitter"
+	"github.com/tonkite/go-tree-sitter/tolk"
 	"testing"
 )
 

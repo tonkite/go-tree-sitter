@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/smacker/go-tree-sitter/markdown"
 	"github.com/stretchr/testify/assert"
+	"github.com/tonkite/go-tree-sitter/markdown"
 )
 
 func TestMarkdown(t *testing.T) {

@@ -2,9 +2,9 @@ package tlb_test
 
 import (
 	"context"
-	sitter "github.com/smacker/go-tree-sitter"
-	"github.com/smacker/go-tree-sitter/tlb"
 	"github.com/stretchr/testify/assert"
+	sitter "github.com/tonkite/go-tree-sitter"
+	"github.com/tonkite/go-tree-sitter/tlb"
 	"testing"
 )
 

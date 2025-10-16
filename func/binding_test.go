@@ -2,9 +2,9 @@ package fun_c_test
 
 import (
 	"context"
-	sitter "github.com/smacker/go-tree-sitter"
-	funC "github.com/smacker/go-tree-sitter/func"
 	"github.com/stretchr/testify/assert"
+	sitter "github.com/tonkite/go-tree-sitter"
+	funC "github.com/tonkite/go-tree-sitter/func"
 	"testing"
 )
 

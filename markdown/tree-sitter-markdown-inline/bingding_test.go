@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	sitter "github.com/smacker/go-tree-sitter"
-	tree_sitter_markdown_inline "github.com/smacker/go-tree-sitter/markdown/tree-sitter-markdown-inline"
 	"github.com/stretchr/testify/assert"
+	sitter "github.com/tonkite/go-tree-sitter"
+	tree_sitter_markdown_inline "github.com/tonkite/go-tree-sitter/markdown/tree-sitter-markdown-inline"
 )
 
 func TestGrammar(t *testing.T) {

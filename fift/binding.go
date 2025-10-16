@@ -4,7 +4,7 @@ package fift
 //TSLanguage *tree_sitter_fift();
 import "C"
 import (
-	sitter "github.com/smacker/go-tree-sitter"
+	sitter "github.com/tonkite/go-tree-sitter"
 	"unsafe"
 )
 
