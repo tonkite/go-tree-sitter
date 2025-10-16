@@ -137,8 +137,8 @@
       "scanner.c",
       "tag.h"
     ],
-    "reference": "v0.20.4",
-    "revision": "3713d4004c2259f7658eaad367dbad1a3989429d",
+    "reference": "v0.23.2",
+    "revision": "5a5ca8551a179998360b4a4ca2c0f366a35acc03",
     "updateBasedOn": "tag"
   },
   {
