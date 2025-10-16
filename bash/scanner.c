@@ -100,7 +100,7 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
 
     for (uint32_t i = 0; i < scanner->heredocs.size; i++) {
         Heredoc *heredoc = array_get(&scanner->heredocs, i);
-        if (heredoc->delimiter.size + 3 + size >= TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
+        if (size + 3 + sizeof(uint32_t) + heredoc->delimiter.size >= TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
             return 0;
         }
 
@@ -110,8 +110,10 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
 
         memcpy(&buffer[size], &heredoc->delimiter.size, sizeof(uint32_t));
         size += sizeof(uint32_t);
-        memcpy(&buffer[size], heredoc->delimiter.contents, heredoc->delimiter.size);
-        size += heredoc->delimiter.size;
+        if (heredoc->delimiter.size > 0) {
+            memcpy(&buffer[size], heredoc->delimiter.contents, heredoc->delimiter.size);
+            size += heredoc->delimiter.size;
+        }
     }
     return size;
 }
@@ -143,8 +145,10 @@ static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
             size += sizeof(uint32_t);
             array_reserve(&heredoc->delimiter, heredoc->delimiter.size);
 
-            memcpy(heredoc->delimiter.contents, &buffer[size], heredoc->delimiter.size);
-            size += heredoc->delimiter.size;
+            if (heredoc->delimiter.size > 0) {
+                memcpy(heredoc->delimiter.contents, &buffer[size], heredoc->delimiter.size);
+                size += heredoc->delimiter.size;
+            }
         }
         assert(size == length);
     }
