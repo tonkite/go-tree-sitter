@@ -271,9 +271,9 @@
       "parser.c",
       "scanner.c"
     ],
-    "reference": "v1.0.0",
-    "revision": "b31a616aac5d05f927f3f9dd809789db7805b632",
-    "updateBasedOn": ""
+    "reference": "v1.3.0",
+    "revision": "a453dbf3ba433db0e5ec621a38a7e59d72e4dc69",
+    "updateBasedOn": "tag"
   },
   {
     "language": "svelte",
