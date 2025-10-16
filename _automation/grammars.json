@@ -398,5 +398,15 @@
     "reference": "v0.5.0",
     "revision": "4b79f5213d51450f46da03b8a62d7b4a500f36f4",
     "updateBasedOn": "tag"
+  },
+  {
+    "language": "solidity",
+    "url": "https://github.com/JoranHonig/tree-sitter-solidity",
+    "files": [
+      "parser.c"
+    ],
+    "reference": "v1.2.13",
+    "revision": "4e938a46c7030dd001bc99e1ac0f0c750ac98254",
+    "updateBasedOn": "tag"
   }
 ]
