@@ -147,8 +147,8 @@
     "files": [
       "parser.c"
     ],
-    "reference": "v0.21.0",
-    "revision": "953abfc8bb3eb2f578e1f461edba4a9885f974b8",
+    "reference": "v0.23.5",
+    "revision": "94703d5a6bed02b98e438d7cad1136c01a60ba2c",
     "updateBasedOn": "tag"
   },
   {
