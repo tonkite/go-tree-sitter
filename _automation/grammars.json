@@ -38,8 +38,8 @@
       "parser.c",
       "scanner.c"
     ],
-    "reference": "v0.22.3",
-    "revision": "0b4aa47f07d958a49260aadc87e8474b03897c23",
+    "reference": "v0.23.4",
+    "revision": "f41e1a044c8a84ea9fa8577fdd2eab92ec96de02",
     "updateBasedOn": "tag"
   },
   {
