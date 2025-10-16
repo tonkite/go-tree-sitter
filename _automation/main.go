@@ -429,9 +429,9 @@ func (s *UpdateService) downloadOcaml(ctx context.Context, g *Grammar) {
 	fileMapping := map[string]string{
 		"parser.c":  "grammars/ocaml/src/parser.c",
 		"scanner.c": "grammars/ocaml/src/scanner.c",
-		"scanner.h": "include/scanner.h",
-		"alloc.h":   "include/tree_sitter/alloc.h",
-		"parser.h":  "include/tree_sitter/parser.h",
+		"scanner.h": "common/scanner.h",
+		"alloc.h":   "grammars/ocaml/src/tree_sitter/alloc.h",
+		"parser.h":  "grammars/ocaml/src/tree_sitter/parser.h",
 	}
 
 	url := g.ContentURL()
@@ -446,10 +446,10 @@ func (s *UpdateService) downloadOcaml(ctx context.Context, g *Grammar) {
 			fmt.Sprintf("%s/%s/%s", url, g.Revision, fp),
 			fmt.Sprintf("%s/%s", g.Language, f),
 			map[string]string{
-				`"tree_sitter/alloc.h"`:        `"alloc.h"`,
-				`"tree_sitter/parser.h"`:       `"parser.h"`,
-				`<tree_sitter/parser.h>`:       `"parser.h"`,
-				`"../../../include/scanner.h"`: `"scanner.h"`,
+				`"tree_sitter/alloc.h"`:       `"alloc.h"`,
+				`"tree_sitter/parser.h"`:      `"parser.h"`,
+				`<tree_sitter/parser.h>`:      `"parser.h"`,
+				`"../../../common/scanner.h"`: `"scanner.h"`,
 			},
 		)
 	}

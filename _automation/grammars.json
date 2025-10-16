@@ -194,8 +194,8 @@
       "alloc.h",
       "parser.h"
     ],
-    "reference": "v0.22.0",
-    "revision": "f7e63111ed1bc1908eacafe6af1ee8d01bfcf7ae",
+    "reference": "v0.24.2",
+    "revision": "0cc270ff90ca09c29d0f2f9dec69ddfef55a3eff",
     "updateBasedOn": "tag"
   },
   {
