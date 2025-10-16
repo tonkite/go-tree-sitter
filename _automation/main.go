@@ -237,6 +237,14 @@ func (s *UpdateService) downloadGrammar(ctx context.Context, g *Grammar) {
 		s.downloadMarkdown(ctx, g)
 	case "sql":
 		s.downloadSql(ctx, g)
+	case "fift":
+		s.downloadTon(ctx, g, "fift")
+	case "func":
+		s.downloadTon(ctx, g, "func")
+	case "tlb":
+		s.downloadTon(ctx, g, "tlb")
+	case "tolk":
+		s.downloadTon(ctx, g, "tolk")
 	default:
 		s.defaultGrammarDownload(ctx, g)
 	}
@@ -320,6 +328,35 @@ func (s *UpdateService) writeGrammarsFile(ctx context.Context) {
 	err = os.WriteFile(grammarsJson, b, 0644)
 	if err != nil {
 		logAndExit(getLogger(ctx), err.Error(), "file", grammarsJson)
+	}
+}
+
+func (s *UpdateService) downloadTon(ctx context.Context, g *Grammar, lang string) {
+	url := g.ContentURL()
+
+	srcPath := fmt.Sprintf("server/src/languages/%s/tree-sitter-%s/src", lang, lang)
+
+	s.downloadFile(
+		ctx,
+		fmt.Sprintf("%s/%s/%s/tree_sitter/parser.h", url, g.Revision, srcPath),
+		fmt.Sprintf("%s/parser.h", g.Language),
+		nil,
+	)
+
+	for _, f := range g.Files {
+		s.downloadFile(
+			ctx,
+			fmt.Sprintf("%s/%s/%s/%s", url, g.Revision, srcPath, f),
+			fmt.Sprintf("%s/%s", g.Language, f),
+			map[string]string{
+				`<tree_sitter/parser.h>`: `"parser.h"`,
+				`"tree_sitter/parser.h"`: `"parser.h"`,
+				`"tree_sitter/array.h"`:  `"../array.h"`,
+				`<tree_sitter/array.h>`:  `"../array.h"`,
+				`"tree_sitter/alloc.h"`:  `"../alloc.h"`,
+				`<tree_sitter/alloc.h>`:  `"../alloc.h"`,
+			},
+		)
 	}
 }
 

@@ -272,7 +272,8 @@
       "scanner.c"
     ],
     "reference": "v1.0.0",
-    "revision": "b31a616aac5d05f927f3f9dd809789db7805b632"
+    "revision": "b31a616aac5d05f927f3f9dd809789db7805b632",
+    "updateBasedOn": ""
   },
   {
     "language": "svelte",
@@ -357,5 +358,45 @@
     "reference": "gh-pages",
     "revision": "c67ecbd37d8d12f22e4cc7138afd14bc20253e10",
     "updateBasedOn": "commit"
+  },
+  {
+    "language": "fift",
+    "url": "https://github.com/ton-blockchain/ton-language-server",
+    "files": [
+      "parser.c"
+    ],
+    "reference": "v0.5.0",
+    "revision": "4b79f5213d51450f46da03b8a62d7b4a500f36f4",
+    "updateBasedOn": "tag"
+  },
+  {
+    "language": "func",
+    "url": "https://github.com/ton-blockchain/ton-language-server",
+    "files": [
+      "parser.c"
+    ],
+    "reference": "v0.5.0",
+    "revision": "4b79f5213d51450f46da03b8a62d7b4a500f36f4",
+    "updateBasedOn": "tag"
+  },
+  {
+    "language": "tlb",
+    "url": "https://github.com/ton-blockchain/ton-language-server",
+    "files": [
+      "parser.c"
+    ],
+    "reference": "v0.5.0",
+    "revision": "4b79f5213d51450f46da03b8a62d7b4a500f36f4",
+    "updateBasedOn": "tag"
+  },
+  {
+    "language": "tolk",
+    "url": "https://github.com/ton-blockchain/ton-language-server",
+    "files": [
+      "parser.c"
+    ],
+    "reference": "v0.5.0",
+    "revision": "4b79f5213d51450f46da03b8a62d7b4a500f36f4",
+    "updateBasedOn": "tag"
   }
 ]
