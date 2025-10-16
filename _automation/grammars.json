@@ -298,8 +298,8 @@
       "parser.c",
       "scanner.c"
     ],
-    "reference": "0.5.0-with-generated-files",
-    "revision": "57c1c6d6ffa1c44b330182d41717e6fe37430704",
+    "reference": "0.7.1-with-generated-files",
+    "revision": "277b583bbb024f20ba88b95c48bf5a6a0b4f2287",
     "updateBasedOn": "tag"
   },
   {
